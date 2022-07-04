@@ -23,7 +23,7 @@ pipeline {
 
          stage('Deploy') {
             steps {
-               deploy adapters: [tomcat8(credentialsId: 'tomcat-cred', path: '', url: 'http://localhost:9090/')], contextPath: null, onFailure: false, war: '**/*.war'
+               deploy adapters: [tomcat8(credentialsId: 'tomcat-cred', path: '', url: 'http://localhost:4000/')], contextPath: null, onFailure: false, war: '**/*.war'
             }
 
           
